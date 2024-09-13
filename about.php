@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="sty.css">
+    <title>about us</title>
+</head>
+<body style=" background-image: url('images.kanisa/maombi.jpg');" >
+    <header style="background-color: #BDB76B; position:sticky">
+        <section class="navbar">
+            <div class="upper">
+                <div class="contact">
+                    <p><i class="fa fa-phone"></i> +255 678 345 216</p>
+                    <p><i class="fa fa-envelope"></i> eagt@gmail.com</p>
+                </div>
+                <div class="location">
+                    <p><i class="fa fa-map-marker"></i> Dodoma - Dodoma</p>
+                    <div class="language">
+                        
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="heading">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <h1> EVANGELISTIC ASSEMBLIES OF GOD (EAGT)</h1>
+                </div>
+
+                <div class="navbar-down">
+                    <a href="home.php">Home</a>
+                    <a href="about.php">About</a>
+                    <a href="login.php">Login</a>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <section class="body">
+        <nav class="about">
+            <div class="mission">
+                <h1>MISSION</h1>
+                <p>Our vision as a church is to make people disciples of Jesus Christ, nationally and internationally, 
+                    being baptized in the Holy Spirit while having spiritual services,
+                     real and accurate teachings of God's word and thus increasing churches.</p>
+            </div>
+           
+           <div class="vission">
+            <h1>VISSION</h1>
+            <p>Evangelistic Assemblies of God (EAGT) exists to worship God in Spirit and truth, 
+                to tell the world about the news of Jesus and to lead believers to know Jesus better through praise,
+                 worship and word under the guidance of the Holy Spirit.</p>
+           </div>
+          
+            <div class="values">
+                <h1>VALUES</h1>
+                <p>Biblical Faithfulness, Integrity, Social Responsibility, Collaboration as a Team,
+                     Strategic Harvesting, Leadership Empowerment, Priesthood for All Believers, 
+                    Financial Management Accountability, Strategic Growth, and Excellence</p>
+            </div>
+
+        </nav>
+        <div class="lg">
+            <div class="picha">
+                <h1>CHURCH LOGO</h1>
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="description">
+                <p>
+                    The logo of the church will have a design almost identical to that of many Assemblies of God churches around the world.
+                     This logo will have the words EVANGELISTIC ASSEMBLIES OF GOD, EAGT, a drawing of a cross and a Bible, as well as another small drawing of the Bible with symbols of a flame and a dove,
+                      as well as the text ALL THE GOSPEL.
+                     The church logo as well as logos that have been used by EAGT in the past will be registered under the Trade Marks and Service Marks Act of 1986.</p>
+            </div>
+        </div>
+
+         
+    </section>
+    <footer>
+        <div class="footer">
+
+            <p>
+                MITANDAO YETU <br><i id="you" class="fa fa-youtube-play">EAGT ONLINE (TV)</i><br>
+                <i id="insta" class="fa fa-instagram">EAGT.CO.TZ</i><br>
+                <i id="in" class="fa fa-twitter-square">EAGT.CO.TZ</i><br>
+                <i id="twiter" class="fa-brands fa-square-x-twitter"></i><br>
+            </p>
+            <p>MAWASILIANO<br> 0622444331 <br>0753345678 <br>eagttaifa@gmail.com</p>
+            <p> copyright &copy;2024 <br>All rights and Conditions Are Reserved </p>
+        </div>
+    </footer>
+    <script src="java.js"></script>
+</body>
+</html>

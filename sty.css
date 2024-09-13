@@ -1,0 +1,482 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+
+:root {
+    --bg-color: white;
+    --bg-white-color: rgb(239, 233, 233);
+    --btn-color:rgb(185, 180, 180);
+    --post-color:rgb(239, 238, 238);
+}
+
+* {
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+
+}
+
+body {
+    background-image: url('images.kanisa/maombi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    color:white;
+}
+
+header .navbar {
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    height: 28vh;
+}
+
+.navbar .upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    align-items: center;
+
+}
+
+.navbar .upper .contact {
+    display: flex;
+    gap: 50px;
+    font-size: 1.0rem;
+    padding-left: 30px;
+}
+
+.navbar .upper .location {
+    display: flex;
+    gap: 50px;
+    font-size: 1.0rem;
+    padding-right: 30px;
+}
+
+
+
+nav {
+    padding: 10px 5px 10px;
+}
+
+nav .heading {
+    text-align: center;
+    padding: 15px 4px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 0 20px;
+    
+}
+
+nav .heading .logo {
+    width: 110px;
+    height: 110px;
+}
+
+nav .heading .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav .heading h1 {
+    font-size: 2.0rem;
+    color: rgb(31, 28, 28);
+}
+
+nav .navbar-down {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    height: 3vh;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+nav .navbar-down a {
+    font-size: 1.0rem;
+}
+
+nav .navbar-down a:hover {
+    text-decoration: underline;
+}
+
+/************* SECTIONS *****************/
+
+/* slides */
+
+
+
+.slide-show {
+    display: flex;
+    height: 73vh;
+    padding: 10px;
+    gap: 10px;
+    background:rgb(242, 242, 242);
+    margin-bottom: 5px;
+    width: 75%;
+}
+
+.slide-show .slide-content {
+    width: 70%;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+}
+
+.slide-show .slide-content .photo {
+    width: 100%;
+    height: 100%;
+    transition: 10s ease;
+
+}
+
+.slide-show .slide-content .photo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.slide-show .slide-content .description {
+    position: absolute;
+    bottom: 20px;
+    left: 38%;
+    color: rgb(0, 0, 255);
+}
+
+/* categories */
+.slide-show .categories {
+    background: white;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.slide-show .categories .heading {
+    padding: 10px 20px;
+    background: rgb(162, 161, 161);
+    border-radius: 10px;
+}
+
+.slide-show .categories .heading h1 {
+    color: white;
+    text-align: center;
+}
+
+.slide-show .categories .content {
+    border-radius: 10px;
+    margin: 5px 3px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background: white;
+}
+
+.slide-show .categories .content a {
+    padding: 2px 0;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-size: 1.0rem;
+    border-radius: 5px;
+    color:rgb(5, 5, 103);
+    
+}
+
+/* ABOUT THE CHURCH */
+.about-church{
+    display: flex;
+    background:rgb(242, 242, 242);
+    padding: 10px;
+    gap: 20px;
+    width: 75%;
+    height: 320px;
+}
+
+
+.about-church .part_A{
+    width: 28%;
+    padding: 10px;
+    background:white;
+    border-radius: 5px;
+    
+}
+.about-church .part_A h1{
+    font-size: 1.3rem;
+}
+.about-church .part_A .b-shop{
+    width: 100%;
+    height: 250px;
+    padding: 3px;
+    
+}
+.about-church .part_A .b-shop img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-church .part_B{
+    width: 72%;
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.about-church .part_B .heading{
+    padding: 10px 3px;
+    font-size: 1.3rem;
+}
+.about-church .part_B .content{
+    font-size: 1.1rem;
+    height: 300px;
+}
+
+
+
+/* footer and social media */
+
+footer {
+    background: rgb(46, 45, 45);
+    height: 180px;
+    width: 100%;
+
+}
+
+footer .footer {
+
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 1;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(244, 244, 244);
+
+}
+
+footer .footer .media {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer p {
+    color: white;
+    padding: 20px;
+    font-size: 1.0rem;
+
+}
+
+/* about us page*/
+.body{
+
+    height: 80vh;
+    width: 75%;
+
+}
+.body .about{
+    display: flex;
+    height: 40vh;
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+   
+  
+
+}
+.body .about .mission{
+    background:#e9e8e8;
+    padding: 20px; 
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 1.0rem;
+
+}
+.body .about .vission{
+    background:#e9e8e8;
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: gray;
+    font-size: 1.0rem;
+    padding: 20px;
+
+
+}
+.body .about .values{
+    background:#e9e8e8;
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 1.0rem;
+    padding: 20px;
+}
+.lg{
+    display: flex;
+    height: 40vh;
+    padding: 10px;
+}
+.lg .picha{
+    width: 30%;
+    border-radius: 5px;
+    justify-content: center;
+}
+.lg .picha h1{
+    padding: 10px;
+}
+.lg .picha img{
+    width: 80%;
+    height: 80%;
+}
+.lg .description{
+    width: 70%;
+    font-size: 1.1rem;
+    padding: 20px;
+
+}
+/* history*/
+.history{
+    display: flex;
+    background:rgb(242, 242, 242);
+    padding: 10px;
+    gap: 20px;
+    width: 75%;
+    height: 450px;
+}
+
+
+.history .part_A{
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.history .part_A h1{
+    font-size: 1.3rem;
+}
+.history .part_A .mwanzo{
+    width: 100%;
+    height: 400px;
+    padding: 3px;
+    
+}
+.history .part_A .mwanzo img{
+    width: 100%;
+    height: 100%;
+}
+
+.history .part_B{
+    width: 60%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.history .part_B .heading{
+    padding: 10px 3px;
+    font-size: 1.3rem;
+}
+.history .part_B .content{
+    font-size: 0.85rem;
+    height: 400px;
+}
+.leadership .about{
+    display: flex;
+    height: 55vh;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background:rgb(242, 242, 242);
+  
+
+}
+.leadership .about .mission{
+    padding: 20px; 
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 1.0rem;
+
+}
+.leadership .about .vission{
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: gray;
+    font-size: 1.0rem;
+    padding: 20px;
+
+
+}
+.leadership .about .values{
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 1.0rem;
+    padding: 20px;
+}
+.leadership .about .mission img{
+    width: 100%;
+    height: 95%;
+}
+.leadership .about .vission img{
+    width: 100%;
+    height: 95%;
+}
+.leadership .about .values img{
+    width: 100%;
+    height: 95%;
+}
+/* department*/
+.idara{
+    background:rgb(242, 242, 242);
+    height: 80vh;
+    width: 75%;
+
+}
+.idara .about{
+    display: flex;
+    height: 75vh;
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    background:rgb(242, 242, 242);
+}
+
+.idara .about .wamama{
+    background:#e9e8e8;
+    padding: 20px; 
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 1.1rem;
+height: 70vh;
+}
+.idara .about .watoto{
+    background:#e9e8e8;
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: gray;
+    font-size: 1.1rem;
+    padding: 20px;
+height: 70vh;
+
+}
+.idara .about .kusifu{
+    background:#e9e8e8;
+    width: 33.3%;
+    border-radius: 10px;
+    box-shadow: grey;
+    font-size: 1.1rem;
+    padding: 20px;
+    height: 70vh;
+}

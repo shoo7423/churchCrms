@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRMS Login</title>
+    <style>
+        body {
+            background-image:url('images.kanisa/maombi.jpg');
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:#F0E68C;
+            color: #334;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            font-size: 40px;
+            color: #Abcd;
+            margin-top: 50px;
+        }
+        form {
+            display: inline-block;
+            margin-top: 10px;
+            text-align: left;
+            width: 400px;
+            background-color:  rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 18px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #985434;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:#921102;
+        }
+        p {
+            font-size: 16px;
+            color: #d9534f; /* Error message color */
+        }
+    </style>
+</head>
+<body>
+<?php
+session_start();
+include 'db.php';  // Make sure the path to db.php is correct
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("SELECT id, role FROM members WHERE username=? AND password=?");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $stmt->store_result();
+
+    // Check if any result is returned
+    if ($stmt->num_rows > 0) {
+        // Bind the result to variables
+        $stmt->bind_result($user_id, $role);
+        $stmt->fetch();
+
+        // Store session data
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = $role;
+        $_SESSION['user_id'] = $user_id;
+
+        // Redirect based on user role
+        switch ($_SESSION['role']) {
+            case 'Member':
+                header('Location:member/member.php');
+                break;
+            case 'Pastor':
+                header('Location: PermanentSecretary/pastor.php');
+                break;
+            case 'Permanent Secretary':
+                header('Location: PermanentSecretary/secretary_dashboard.php');
+                break;
+            case 'Treasurer':
+                header('Location: treasure/mhazini.php');
+                break;
+            default:
+                header('Location: index.php');
+                break;
+        }
+        exit();
+    } else {
+        $login_error = "Invalid username or password";
+    }
+    $stmt->close();
+}
+?>
+
+
+    <form action="" method="post">
+        <center><img src="PermanentSecretary/EAGT LOGO.jpg" style="height:90px;width:90px;border-radius:200px;borded:1px solid;" alt=""></center>
+        <center><div style="color:yellow;"> LOGIN </div></center><br>
+        <?php if (isset($login_error)) { echo "<p>$login_error</p>"; } ?>
+        <label>Username:</label>
+        <input type="text" name="username" required><br>
+        <label>Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit" name="login" value="login">Login</button>
+        <br><br>
+        <button id="back" >Back Home</button>
+    </form>
+</body>
+<script>
+    document.getElementById('back').addEventListener("click",function(){
+        window.location.href="home.php";
+    });
+    </script>
+</html>
