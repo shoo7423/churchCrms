@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
 </body>
 <script>
     document.getElementById('back').addEventListener("click",function(){
-        window.location.href="home.php";
+        window.location.href="index.html";
     });
     </script>
 </html>
